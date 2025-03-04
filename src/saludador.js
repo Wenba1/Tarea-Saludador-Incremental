@@ -15,4 +15,12 @@ function saludadorConHora(hora=new Date().getHours()){
         return "Buenas noches";
     }
 }
-export { saludador, saludadorConNombre, saludadorConHora};
+
+function saludadorSegunElGenero(nombre, genero){
+    if(genero==="Femenino"){
+        return `Hola, Sra. ${nombre}`;
+    }else if(genero==="Masculino"){
+        return `Hola, Sr. ${nombre}`;
+    }
+}
+export { saludador, saludadorConNombre, saludadorConHora, saludadorSegunElGenero};

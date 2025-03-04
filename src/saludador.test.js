@@ -1,4 +1,4 @@
-import { saludador,saludadorConNombre, saludadorConHora } from "./saludador";
+import { saludador,saludadorConNombre, saludadorConHora, saludadorSegunElGenero } from "./saludador";
 
 describe("Saludador:", () => {
     it("deberia saludar con 'Hola'", () => {
@@ -23,5 +23,13 @@ describe("Saludador:", () => {
 
     it("deberia saludar con segun la hora", () => {
         expect(saludadorConHora(20)).toEqual("Buenas noches");
+    });
+
+    it("deberia saludar con segun el genero", () => {
+        expect(saludadorSegunElGenero("Fabiola","Femenino")).toEqual("Hola, Sra. Fabiola");
+    });
+
+    it("deberia saludar con segun el genero", () => {
+        expect(saludadorSegunElGenero("Marcos","Masculino")).toEqual("Hola, Sr. Marcos");
     });
 });
