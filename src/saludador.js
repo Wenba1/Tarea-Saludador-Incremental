@@ -23,4 +23,15 @@ function saludadorSegunElGenero(nombre, genero){
         return `Hola, Sr. ${nombre}`;
     }
 }
-export { saludador, saludadorConNombre, saludadorConHora, saludadorSegunElGenero};
+
+function saludadorSegunEdadYGenero(nombre, edad, genero) {
+    if (edad > 30) {
+        if (genero === "Femenino"){
+            return `Hola, Sra. ${nombre}`;
+        } else if (genero === "Masculino") {
+            return `Hola, Sr. ${nombre}`;
+        }
+    }
+    return `Hola, ${nombre}`;
+}
+export { saludador, saludadorConNombre, saludadorConHora, saludadorSegunElGenero, saludadorSegunEdadYGenero};
