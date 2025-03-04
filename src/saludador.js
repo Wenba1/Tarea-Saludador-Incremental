@@ -1,5 +1,9 @@
 function saludador() {
     return "Hola";
-  }
-  
-  export default saludador;
+}
+
+function saludadorConNombre(nombre) {
+    return `Hola ${nombre}`;
+}
+
+export { saludador, saludadorConNombre };
